@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --dark-blue: #051d3b;
+    --white: #fafafa;
+    --font-family: 'Montserrat', sans-serif;
+    --padding-x: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 80px;
+    background-color: var(--dark-blue);
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .logo .img {
+    width: 100%;
+    max-width: 100px;
+    min-width: 65px;
+    max-height: 40px;
+}
+
+.menu {
+    height: 100%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+.menu ul li {
+    margin: 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+.menu ul li:hover {
+    border-bottom: 1px solid var(--white);
+
+}
+.menu ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: var(--font-family);
+}
+
+/* *************************************************************************** */
+
+.hero_section {
+    height: calc(100vh - 80px);
+    background-color: pink;
+    background-image: url(./imgs/hero-bk.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.hero_section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-blue);
+    opacity: 1;
+    mix-blend-mode: hard-light;
+}
+.hero_section * {
+    z-index: 1;
+    position: relative;
+}
+.hero_section-text h1 {
+   font-family: var(--font-family);
+   font-size: 80px;
+   text-transform: uppercase;
+   text-align: center;
+   font-weight: 300;
+   color: var(--white);
+   line-height: 1;
+}
+.hero_section-text h1 span {
+    display: block;
+    font-weight: 700;
+}
+.hero_section-more {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+.hero_section-more p {
+    font-family: var(--font-family);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--white);
+}
+
+/* *************************************************************************** */
+
+.about_section {
+    background-color: var(--white);
+    padding: 100px var(--padding-x);
+}
+.containter {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section_title {
+    font-family: var(--font-family);
+    font-size: 35px;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.blueTitle {
+    color: var(--dark-blue);
+}
+.whiteTitle {
+    color: var(--white);
+}
+.section_title span {
+    font-weight: 700;
+}
+.about_section p {
+    font-family: var(--font-family);
+    font-size: 20px;
+    color: var(--dark-blue);
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* *************************************************************************** */
+
+.beneficios_section {
+    padding: 100px var(--padding-x);
+    background-image: url(imgs/nubes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.beneficios_section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    opacity: 0.6;
+}
+.beneficios_section * {
+    position: relative;
+    z-index: 1;
+}
+.beneficios_cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 275px));
+    gap: 10%;/*es el espacio de los grid items*/
+    justify-content: center;
+    margin: 80px 0;
+}
+.beneficios_card-grid {
+    width: 100%;
+    background-color: white;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 200px auto;
+    padding: 35px;
+    gap: 15px;
+    box-shadow: 7px 5px 5px #7b7b7b2e;
+}
+.beneficios_card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.beneficios_card-img img {
+    width: 100%;
+    height: 100%;
+    max-height: 170px;
+    max-width: 175px;
+
+}
+.beneficios_card-text h3{
+    font-family: var(--font-family);
+    text-align: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark-blue);
+}
+
+/* *************************************************************************** */
+
+.contact_section {
+    background-color: var(--dark-blue);
+    padding: 100px var(--padding-x);
+}
+.contact_formContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 50px;
+}
+.contact_formContainer-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact_formContainer-img img {
+    width: 100%;
+    max-width: 470px;
+    object-fit: contain;
+}
+.contact_formContainer-img form {
+    display: flex;
+}
+.contact_formContainer-form .form_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+.contact_formContainer-form .form_item label {
+    font-family: var(--font-family);
+    font-size: 20px;
+    color: var(--white);
+    font-weight: 200px;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+.contact_formContainer-form .form_item input {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    outline: none;
+    width: 100%;
+}
+.contact_formContainer-form .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.contact_formContainer-form form button {
+    width: 40%;
+    align-self: center;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: skyblue;
+    font-family: var(--font-family);
+    margin-top: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.contact_formContainer-form form button:hover {
+    background-color: violet;
+    color: var(--white);
+    font-weight: 600;
+    
+}
